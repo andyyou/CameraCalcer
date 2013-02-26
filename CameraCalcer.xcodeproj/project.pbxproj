@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A123154A16DCE55500D6F8DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123154916DCE55500D6F8DD /* UIKit.framework */; };
+		A123154C16DCE55500D6F8DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123154B16DCE55500D6F8DD /* Foundation.framework */; };
+		A123154E16DCE55500D6F8DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123154D16DCE55500D6F8DD /* CoreGraphics.framework */; };
+		A123155416DCE55500D6F8DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A123155216DCE55500D6F8DD /* InfoPlist.strings */; };
+		A123155616DCE55500D6F8DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A123155516DCE55500D6F8DD /* main.m */; };
+		A123155A16DCE55500D6F8DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A123155916DCE55500D6F8DD /* AppDelegate.m */; };
+		A123155C16DCE55500D6F8DD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A123155B16DCE55500D6F8DD /* Default.png */; };
+		A123155E16DCE55500D6F8DD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A123155D16DCE55500D6F8DD /* Default@2x.png */; };
+		A123156016DCE55500D6F8DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A123155F16DCE55500D6F8DD /* Default-568h@2x.png */; };
+		A123156316DCE55500D6F8DD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A123156116DCE55500D6F8DD /* MainStoryboard.storyboard */; };
+		A123156616DCE55500D6F8DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A123156516DCE55500D6F8DD /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A123154616DCE55500D6F8DD /* CameraCalcer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraCalcer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A123154916DCE55500D6F8DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A123154B16DCE55500D6F8DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A123154D16DCE55500D6F8DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A123155116DCE55500D6F8DD /* CameraCalcer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CameraCalcer-Info.plist"; sourceTree = "<group>"; };
+		A123155316DCE55500D6F8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A123155516DCE55500D6F8DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A123155716DCE55500D6F8DD /* CameraCalcer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraCalcer-Prefix.pch"; sourceTree = "<group>"; };
+		A123155816DCE55500D6F8DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A123155916DCE55500D6F8DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A123155B16DCE55500D6F8DD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A123155D16DCE55500D6F8DD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A123155F16DCE55500D6F8DD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A123156216DCE55500D6F8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A123156416DCE55500D6F8DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A123156516DCE55500D6F8DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A123154316DCE55500D6F8DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A123154A16DCE55500D6F8DD /* UIKit.framework in Frameworks */,
+				A123154C16DCE55500D6F8DD /* Foundation.framework in Frameworks */,
+				A123154E16DCE55500D6F8DD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A123153D16DCE55500D6F8DD = {
+			isa = PBXGroup;
+			children = (
+				A123154F16DCE55500D6F8DD /* CameraCalcer */,
+				A123154816DCE55500D6F8DD /* Frameworks */,
+				A123154716DCE55500D6F8DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A123154716DCE55500D6F8DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A123154616DCE55500D6F8DD /* CameraCalcer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A123154816DCE55500D6F8DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A123154916DCE55500D6F8DD /* UIKit.framework */,
+				A123154B16DCE55500D6F8DD /* Foundation.framework */,
+				A123154D16DCE55500D6F8DD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A123154F16DCE55500D6F8DD /* CameraCalcer */ = {
+			isa = PBXGroup;
+			children = (
+				A123155816DCE55500D6F8DD /* AppDelegate.h */,
+				A123155916DCE55500D6F8DD /* AppDelegate.m */,
+				A123156116DCE55500D6F8DD /* MainStoryboard.storyboard */,
+				A123156416DCE55500D6F8DD /* ViewController.h */,
+				A123156516DCE55500D6F8DD /* ViewController.m */,
+				A123155016DCE55500D6F8DD /* Supporting Files */,
+			);
+			path = CameraCalcer;
+			sourceTree = "<group>";
+		};
+		A123155016DCE55500D6F8DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A123155116DCE55500D6F8DD /* CameraCalcer-Info.plist */,
+				A123155216DCE55500D6F8DD /* InfoPlist.strings */,
+				A123155516DCE55500D6F8DD /* main.m */,
+				A123155716DCE55500D6F8DD /* CameraCalcer-Prefix.pch */,
+				A123155B16DCE55500D6F8DD /* Default.png */,
+				A123155D16DCE55500D6F8DD /* Default@2x.png */,
+				A123155F16DCE55500D6F8DD /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A123154516DCE55500D6F8DD /* CameraCalcer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A123156916DCE55500D6F8DD /* Build configuration list for PBXNativeTarget "CameraCalcer" */;
+			buildPhases = (
+				A123154216DCE55500D6F8DD /* Sources */,
+				A123154316DCE55500D6F8DD /* Frameworks */,
+				A123154416DCE55500D6F8DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CameraCalcer;
+			productName = CameraCalcer;
+			productReference = A123154616DCE55500D6F8DD /* CameraCalcer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A123153E16DCE55500D6F8DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = AndyYou;
+			};
+			buildConfigurationList = A123154116DCE55500D6F8DD /* Build configuration list for PBXProject "CameraCalcer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A123153D16DCE55500D6F8DD;
+			productRefGroup = A123154716DCE55500D6F8DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A123154516DCE55500D6F8DD /* CameraCalcer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A123154416DCE55500D6F8DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A123155416DCE55500D6F8DD /* InfoPlist.strings in Resources */,
+				A123155C16DCE55500D6F8DD /* Default.png in Resources */,
+				A123155E16DCE55500D6F8DD /* Default@2x.png in Resources */,
+				A123156016DCE55500D6F8DD /* Default-568h@2x.png in Resources */,
+				A123156316DCE55500D6F8DD /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A123154216DCE55500D6F8DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A123155616DCE55500D6F8DD /* main.m in Sources */,
+				A123155A16DCE55500D6F8DD /* AppDelegate.m in Sources */,
+				A123156616DCE55500D6F8DD /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A123155216DCE55500D6F8DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A123155316DCE55500D6F8DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A123156116DCE55500D6F8DD /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A123156216DCE55500D6F8DD /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A123156716DCE55500D6F8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A123156816DCE55500D6F8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A123156A16DCE55500D6F8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CameraCalcer/CameraCalcer-Prefix.pch";
+				INFOPLIST_FILE = "CameraCalcer/CameraCalcer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A123156B16DCE55500D6F8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CameraCalcer/CameraCalcer-Prefix.pch";
+				INFOPLIST_FILE = "CameraCalcer/CameraCalcer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A123154116DCE55500D6F8DD /* Build configuration list for PBXProject "CameraCalcer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A123156716DCE55500D6F8DD /* Debug */,
+				A123156816DCE55500D6F8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A123156916DCE55500D6F8DD /* Build configuration list for PBXNativeTarget "CameraCalcer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A123156A16DCE55500D6F8DD /* Debug */,
+				A123156B16DCE55500D6F8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A123153E16DCE55500D6F8DD /* Project object */;
+}
