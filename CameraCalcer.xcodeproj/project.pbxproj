@@ -18,6 +18,9 @@
 		A123156016DCE55500D6F8DD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A123155F16DCE55500D6F8DD /* Default-568h@2x.png */; };
 		A123156316DCE55500D6F8DD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A123156116DCE55500D6F8DD /* MainStoryboard.storyboard */; };
 		A123156616DCE55500D6F8DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A123156516DCE55500D6F8DD /* ViewController.m */; };
+		A123156F16DCEAA200D6F8DD /* bluepoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A123156D16DCEAA200D6F8DD /* bluepoint.png */; };
+		A123157016DCEAA200D6F8DD /* bluepoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A123156E16DCEAA200D6F8DD /* bluepoint@2x.png */; };
+		A123157216DCEB6D00D6F8DD /* bluprint_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = A123157116DCEB6D00D6F8DD /* bluprint_grid.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		A123156216DCE55500D6F8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A123156416DCE55500D6F8DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A123156516DCE55500D6F8DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A123156D16DCEAA200D6F8DD /* bluepoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluepoint.png; path = images/bluepoint.png; sourceTree = "<group>"; };
+		A123156E16DCEAA200D6F8DD /* bluepoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bluepoint@2x.png"; path = "images/bluepoint@2x.png"; sourceTree = "<group>"; };
+		A123157116DCEB6D00D6F8DD /* bluprint_grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluprint_grid.png; path = images/bluprint_grid.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		A123154F16DCE55500D6F8DD /* CameraCalcer */ = {
 			isa = PBXGroup;
 			children = (
+				A123156C16DCEA8700D6F8DD /* images */,
 				A123155816DCE55500D6F8DD /* AppDelegate.h */,
 				A123155916DCE55500D6F8DD /* AppDelegate.m */,
 				A123156116DCE55500D6F8DD /* MainStoryboard.storyboard */,
@@ -105,6 +112,17 @@
 				A123155F16DCE55500D6F8DD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A123156C16DCEA8700D6F8DD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A123157116DCEB6D00D6F8DD /* bluprint_grid.png */,
+				A123156D16DCEAA200D6F8DD /* bluepoint.png */,
+				A123156E16DCEAA200D6F8DD /* bluepoint@2x.png */,
+			);
+			name = images;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +181,9 @@
 				A123155E16DCE55500D6F8DD /* Default@2x.png in Resources */,
 				A123156016DCE55500D6F8DD /* Default-568h@2x.png in Resources */,
 				A123156316DCE55500D6F8DD /* MainStoryboard.storyboard in Resources */,
+				A123156F16DCEAA200D6F8DD /* bluepoint.png in Resources */,
+				A123157016DCEAA200D6F8DD /* bluepoint@2x.png in Resources */,
+				A123157216DCEB6D00D6F8DD /* bluprint_grid.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
