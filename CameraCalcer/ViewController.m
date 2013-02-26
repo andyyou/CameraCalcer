@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "AnswerViewController.h"
 @interface ViewController ()
 
 @end
@@ -128,4 +128,15 @@
 {
     [self.view endEditing:YES];
 }
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    AnswerViewController* answerViewController = (AnswerViewController *) [segue destinationViewController];
+    answerViewController.parameterString = lbCameraType.text;
+    
+}
+
+
+
 @end

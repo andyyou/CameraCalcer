@@ -21,6 +21,7 @@
 		A123156F16DCEAA200D6F8DD /* bluepoint.png in Resources */ = {isa = PBXBuildFile; fileRef = A123156D16DCEAA200D6F8DD /* bluepoint.png */; };
 		A123157016DCEAA200D6F8DD /* bluepoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A123156E16DCEAA200D6F8DD /* bluepoint@2x.png */; };
 		A123157216DCEB6D00D6F8DD /* bluprint_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = A123157116DCEB6D00D6F8DD /* bluprint_grid.png */; };
+		A123157816DD733800D6F8DD /* AnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A123157716DD733800D6F8DD /* AnswerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		A123156D16DCEAA200D6F8DD /* bluepoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluepoint.png; path = images/bluepoint.png; sourceTree = "<group>"; };
 		A123156E16DCEAA200D6F8DD /* bluepoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bluepoint@2x.png"; path = "images/bluepoint@2x.png"; sourceTree = "<group>"; };
 		A123157116DCEB6D00D6F8DD /* bluprint_grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bluprint_grid.png; path = images/bluprint_grid.png; sourceTree = "<group>"; };
+		A123157616DD733800D6F8DD /* AnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerViewController.h; sourceTree = "<group>"; };
+		A123157716DD733800D6F8DD /* AnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				A123155816DCE55500D6F8DD /* AppDelegate.h */,
 				A123155916DCE55500D6F8DD /* AppDelegate.m */,
 				A123156116DCE55500D6F8DD /* MainStoryboard.storyboard */,
+				A123157616DD733800D6F8DD /* AnswerViewController.h */,
+				A123157716DD733800D6F8DD /* AnswerViewController.m */,
 				A123156416DCE55500D6F8DD /* ViewController.h */,
 				A123156516DCE55500D6F8DD /* ViewController.m */,
 				A123155016DCE55500D6F8DD /* Supporting Files */,
@@ -197,6 +202,7 @@
 				A123155616DCE55500D6F8DD /* main.m in Sources */,
 				A123155A16DCE55500D6F8DD /* AppDelegate.m in Sources */,
 				A123156616DCE55500D6F8DD /* ViewController.m in Sources */,
+				A123157816DD733800D6F8DD /* AnswerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +323,7 @@
 				A123156B16DCE55500D6F8DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

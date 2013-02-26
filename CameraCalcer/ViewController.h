@@ -18,4 +18,5 @@
     NSInteger selectedOption;
 }
 - (IBAction) showSearchWhereOptions;
+
 @end
