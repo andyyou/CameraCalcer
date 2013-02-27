@@ -11,9 +11,26 @@
 @interface AnswerViewController : UIViewController
 {
     IBOutlet UILabel *lbAnswer;
-    NSString* parameterString;
+    IBOutlet UILabel *lbMDRez;
+    IBOutlet UILabel *lbLinePerSecond;
+    IBOutlet UILabel *lbShiftCycles;
+    IBOutlet UILabel *lbMask;
+    IBOutlet UILabel *lbPxPerCCD;
+    IBOutlet UILabel *lbBestPossibleCDRez;
+    IBOutlet UILabel *lbWd;
+    IBOutlet UILabel *CamFovIn;
+    NSString* camreaType;
+    NSNumber* systemFov;
+    NSNumber* speed;
+    NSNumber* cdRez;
+    NSNumber* mdCdRation;
+    
 }
 
 -(IBAction) backMainView:(id)sender;
-@property (nonatomic, retain) NSString* parameterString;
+@property (nonatomic, retain) NSString* camreaType;
+@property (nonatomic, assign) NSNumber* systemFov;
+@property (nonatomic, assign) NSNumber* speed;
+@property (nonatomic, assign) NSNumber* cdRez;
+@property (nonatomic, assign) NSNumber* mdCdRation;
 @end

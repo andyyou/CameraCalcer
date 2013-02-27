@@ -40,6 +40,11 @@
 
 - (void)dealloc {
     [lbCameraType release];
+    [txtMdCdRatio release];
+    [txtCdRez release];
+    [txtLens release];
+    [txtSpeed release];
+    [txtSystemFov release];
     [super dealloc];
 }
 #pragma mark-
@@ -133,7 +138,19 @@
 {
     
     AnswerViewController* answerViewController = (AnswerViewController *) [segue destinationViewController];
-    answerViewController.parameterString = lbCameraType.text;
+    answerViewController.camreaType = lbCameraType.text;
+    
+    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+    [f setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    answerViewController.systemFov = [f numberFromString: txtSystemFov.text];
+    answerViewController.speed = [f numberFromString: txtSpeed.text];
+    answerViewController.cdRez = [f numberFromString:txtCdRez.text];
+    answerViewController.mdCdRation = [f numberFromString:txtMdCdRatio.text];
+    
+    [f release];
+    
+    
     
 }
 

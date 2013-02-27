@@ -13,6 +13,12 @@
     //toturial: http://goo.gl/JYFkw
     
     IBOutlet UILabel *lbCameraType;
+    IBOutlet UITextField *txtSystemFov;
+    IBOutlet UITextField *txtSpeed;
+    IBOutlet UITextField *txtMdCdRatio;
+    IBOutlet UITextField *txtCdRez;
+    IBOutlet UITextField *txtLens;
+    
     NSMutableArray *searchWhereOptions;
     UIActionSheet *actionSheet;
     NSInteger selectedOption;
