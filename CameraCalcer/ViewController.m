@@ -131,7 +131,22 @@
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-   
+    // UNDOEN: 
+    UIAlertView* dialog = [[UIAlertView alloc] init];
+    [dialog setDelegate:self];
+    [dialog setTitle:@"Enter Name"];
+    [dialog setMessage:@" "];
+    [dialog addButtonWithTitle:@"Cancel"];
+    [dialog addButtonWithTitle:@"OK"];
+    
+    textField = [[UITextField alloc] initWithFrame:CGRectMake(20.0, 45.0, 245.0, 25.0)];
+    [textField setBackgroundColor:[UIColor whiteColor]];
+    [dialog addSubview:textField];
+    CGAffineTransform moveUp = CGAffineTransformMakeTranslation(0.0, 100.0);
+    [dialog setTransform: moveUp];
+    [dialog show];
+    [dialog release];
+    
     
 }
 -(BOOL) textFieldShouldEndEditing:(UITextField *)textField
