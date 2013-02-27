@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate, UIAlertViewDelegate>
 {
     //toturial: http://goo.gl/JYFkw
     
@@ -19,6 +19,7 @@
     IBOutlet UITextField *txtCdRez;
     IBOutlet UITextField *txtLens;
     IBOutlet UITextField *txtLimits;
+    UITextField *txtInput;
     
     NSMutableArray *searchWhereOptions;
     UIActionSheet *actionSheet;

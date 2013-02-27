@@ -132,23 +132,37 @@
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
     // UNDOEN: 
-    UIAlertView* dialog = [[UIAlertView alloc] init];
-    [dialog setDelegate:self];
-    [dialog setTitle:@"Enter Name"];
-    [dialog setMessage:@" "];
-    [dialog addButtonWithTitle:@"Cancel"];
-    [dialog addButtonWithTitle:@"OK"];
+    [self showAlert];
     
-    textField = [[UITextField alloc] initWithFrame:CGRectMake(20.0, 45.0, 245.0, 25.0)];
-    [textField setBackgroundColor:[UIColor whiteColor]];
-    [dialog addSubview:textField];
-    CGAffineTransform moveUp = CGAffineTransformMakeTranslation(0.0, 100.0);
-    [dialog setTransform: moveUp];
-    [dialog show];
-    [dialog release];
     
     
 }
+-(void)showAlert {
+    // UNDOEN: 
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Album"
+                                                        message:@"Enter a name for the album."
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Save", nil];
+    alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    UITextField* textfield = [alertView textFieldAtIndex:0];
+    textfield.placeholder = @"Title";
+    [[alertView textFieldAtIndex:0] setKeyboardType:UIKeyboardTypeNumberPad];
+    [alertView show];
+}
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    // UNDOEN: 
+    if (buttonIndex != 1) {
+        NSLog(@"Cancel");
+        return;
+    }
+    UITextField* textfield = [alertView textFieldAtIndex:0];
+    txtSystemFov.text = textfield.text;
+}
+
 -(BOOL) textFieldShouldEndEditing:(UITextField *)textField
 {
     [textField resignFirstResponder];
