@@ -18,6 +18,7 @@
     IBOutlet UITextField *txtMdCdRatio;
     IBOutlet UITextField *txtCdRez;
     IBOutlet UITextField *txtLens;
+    IBOutlet UITextField *txtLimits;
     
     NSMutableArray *searchWhereOptions;
     UIActionSheet *actionSheet;

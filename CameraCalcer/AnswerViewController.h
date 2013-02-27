@@ -24,6 +24,8 @@
     NSNumber* speed;
     NSNumber* cdRez;
     NSNumber* mdCdRation;
+    NSNumber* limits;
+    NSNumber* lens;
     
 }
 
@@ -33,4 +35,6 @@
 @property (nonatomic, assign) NSNumber* speed;
 @property (nonatomic, assign) NSNumber* cdRez;
 @property (nonatomic, assign) NSNumber* mdCdRation;
+@property (nonatomic, assign) NSNumber* limits;
+@property (nonatomic, assign) NSNumber* lens;
 @end

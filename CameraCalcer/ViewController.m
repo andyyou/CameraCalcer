@@ -20,7 +20,10 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bluepoint.png"]];
     searchWhereOptions = [[NSMutableArray alloc] init];
     [searchWhereOptions addObject:@"7500HS"];
+    [searchWhereOptions addObject:@"7500LS"];
     [searchWhereOptions addObject:@"8K-320"];
+    [searchWhereOptions addObject:@"8K-640"];
+    [searchWhereOptions addObject:@"5150"];
     
     // default list option to select
     selectedOption = 0;
@@ -45,6 +48,7 @@
     [txtLens release];
     [txtSpeed release];
     [txtSystemFov release];
+    [txtLimits release];
     [super dealloc];
 }
 #pragma mark-
@@ -147,7 +151,8 @@
     answerViewController.speed = [f numberFromString: txtSpeed.text];
     answerViewController.cdRez = [f numberFromString:txtCdRez.text];
     answerViewController.mdCdRation = [f numberFromString:txtMdCdRatio.text];
-    
+    answerViewController.limits = [f numberFromString:txtLimits.text];
+    answerViewController.lens = [f numberFromString:txtLens.text];
     [f release];
     
     
