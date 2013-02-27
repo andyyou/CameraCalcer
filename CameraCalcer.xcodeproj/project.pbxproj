@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A113DF3B16DE0D82008FB127 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF3A16DE0D82008FB127 /* icon.png */; };
+		A113DF3D16DE0D95008FB127 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF3C16DE0D95008FB127 /* icon@2x.png */; };
+		A113DF4016DE0F86008FB127 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF3E16DE0F86008FB127 /* splash.png */; };
+		A113DF4116DE0F86008FB127 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF3F16DE0F86008FB127 /* splash@2x.png */; };
+		A113DF4316DE109C008FB127 /* splash@iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF4216DE109C008FB127 /* splash@iphone5.png */; };
+		A113DF4516DE10B2008FB127 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF4416DE10B2008FB127 /* Default.png */; };
+		A113DF4716DE10C3008FB127 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF4616DE10C3008FB127 /* Default@2x.png */; };
+		A113DF4916DE10CB008FB127 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF4816DE10CB008FB127 /* Default-568h@2x.png */; };
 		A123154A16DCE55500D6F8DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123154916DCE55500D6F8DD /* UIKit.framework */; };
 		A123154C16DCE55500D6F8DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123154B16DCE55500D6F8DD /* Foundation.framework */; };
 		A123154E16DCE55500D6F8DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123154D16DCE55500D6F8DD /* CoreGraphics.framework */; };
@@ -25,6 +33,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A113DF3A16DE0D82008FB127 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A113DF3C16DE0D95008FB127 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		A113DF3E16DE0F86008FB127 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = images/splash.png; sourceTree = "<group>"; };
+		A113DF3F16DE0F86008FB127 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash@2x.png"; path = "images/splash@2x.png"; sourceTree = "<group>"; };
+		A113DF4216DE109C008FB127 /* splash@iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash@iphone5.png"; path = "images/splash@iphone5.png"; sourceTree = "<group>"; };
+		A113DF4416DE10B2008FB127 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A113DF4616DE10C3008FB127 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A113DF4816DE10CB008FB127 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A123154616DCE55500D6F8DD /* CameraCalcer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraCalcer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A123154916DCE55500D6F8DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A123154B16DCE55500D6F8DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +81,12 @@
 		A123153D16DCE55500D6F8DD = {
 			isa = PBXGroup;
 			children = (
+				A113DF4816DE10CB008FB127 /* Default-568h@2x.png */,
+				A113DF4616DE10C3008FB127 /* Default@2x.png */,
+				A113DF4416DE10B2008FB127 /* Default.png */,
+				A113DF4216DE109C008FB127 /* splash@iphone5.png */,
+				A113DF3C16DE0D95008FB127 /* icon@2x.png */,
+				A113DF3A16DE0D82008FB127 /* icon.png */,
 				A123154F16DCE55500D6F8DD /* CameraCalcer */,
 				A123154816DCE55500D6F8DD /* Frameworks */,
 				A123154716DCE55500D6F8DD /* Products */,
@@ -122,6 +144,8 @@
 		A123156C16DCEA8700D6F8DD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A113DF3E16DE0F86008FB127 /* splash.png */,
+				A113DF3F16DE0F86008FB127 /* splash@2x.png */,
 				A123157116DCEB6D00D6F8DD /* bluprint_grid.png */,
 				A123156D16DCEAA200D6F8DD /* bluepoint.png */,
 				A123156E16DCEAA200D6F8DD /* bluepoint@2x.png */,
@@ -189,6 +213,14 @@
 				A123156F16DCEAA200D6F8DD /* bluepoint.png in Resources */,
 				A123157016DCEAA200D6F8DD /* bluepoint@2x.png in Resources */,
 				A123157216DCEB6D00D6F8DD /* bluprint_grid.png in Resources */,
+				A113DF3B16DE0D82008FB127 /* icon.png in Resources */,
+				A113DF3D16DE0D95008FB127 /* icon@2x.png in Resources */,
+				A113DF4016DE0F86008FB127 /* splash.png in Resources */,
+				A113DF4116DE0F86008FB127 /* splash@2x.png in Resources */,
+				A113DF4316DE109C008FB127 /* splash@iphone5.png in Resources */,
+				A113DF4516DE10B2008FB127 /* Default.png in Resources */,
+				A113DF4716DE10C3008FB127 /* Default@2x.png in Resources */,
+				A113DF4916DE10CB008FB127 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
