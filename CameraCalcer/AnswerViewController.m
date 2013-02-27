@@ -97,12 +97,12 @@
     
     NSNumber *tmpShiftCycles = [NSNumber numberWithDouble: [[dicCamMhzs objectForKey:camreaType] doubleValue] * 1000000 / [linesPerSecond floatValue]];
     NSNumber *shiftCycles = (tmpShiftCycles > [dicCamAvg objectForKey:camreaType])? [dicCamAvg objectForKey:camreaType]: tmpShiftCycles;
+    
     lbShiftCycles.text = [NSString stringWithFormat:@"%.f", [shiftCycles floatValue]];
     
     NSNumber *I = (shiftCycles < [dicCamAvg objectForKey:camreaType])? [NSNumber numberWithInt: 1]:[NSNumber numberWithInt:0];
     NSNumber *mask = ([dicCamNo objectForKey:camreaType] > [NSNumber numberWithInt: 3]) ? [NSNumber numberWithInt:0] :I;
     lbMask.text = [mask stringValue];
-    
     NSNumber *numberPixelsPerCcd;
     if(mask == 0)
     {
@@ -121,6 +121,14 @@
 
     NSNumber *camFov = [NSNumber numberWithDouble:[systemFov doubleValue] / [limits doubleValue]];
     CamFovIn.text = [NSString stringWithFormat:@"%.2f", [camFov floatValue]];
+    
+    [dicWdDivisor release];
+    [dicCamAvg release];
+    [dicMaskDiscount release];
+    [dicMaskValue release];
+    [dicCamMhzs release];
+    [dicCamNo release];
+    
 }
 
 - (void)didReceiveMemoryWarning

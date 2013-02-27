@@ -12,9 +12,6 @@
 		A113DF4016DE0F86008FB127 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF3E16DE0F86008FB127 /* splash.png */; };
 		A113DF4116DE0F86008FB127 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF3F16DE0F86008FB127 /* splash@2x.png */; };
 		A113DF4316DE109C008FB127 /* splash@iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF4216DE109C008FB127 /* splash@iphone5.png */; };
-		A113DF4516DE10B2008FB127 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF4416DE10B2008FB127 /* Default.png */; };
-		A113DF4716DE10C3008FB127 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF4616DE10C3008FB127 /* Default@2x.png */; };
-		A113DF4916DE10CB008FB127 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A113DF4816DE10CB008FB127 /* Default-568h@2x.png */; };
 		A123154A16DCE55500D6F8DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123154916DCE55500D6F8DD /* UIKit.framework */; };
 		A123154C16DCE55500D6F8DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123154B16DCE55500D6F8DD /* Foundation.framework */; };
 		A123154E16DCE55500D6F8DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123154D16DCE55500D6F8DD /* CoreGraphics.framework */; };
@@ -218,9 +215,6 @@
 				A113DF4016DE0F86008FB127 /* splash.png in Resources */,
 				A113DF4116DE0F86008FB127 /* splash@2x.png in Resources */,
 				A113DF4316DE109C008FB127 /* splash@iphone5.png in Resources */,
-				A113DF4516DE10B2008FB127 /* Default.png in Resources */,
-				A113DF4716DE10C3008FB127 /* Default@2x.png in Resources */,
-				A113DF4916DE10CB008FB127 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
