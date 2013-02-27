@@ -33,8 +33,8 @@
     [tapRecognizer setDelegate:self];
     [tapRecognizer setNumberOfTapsRequired:1];
     [self.view addGestureRecognizer:tapRecognizer];
-    
-   
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showAlert:)]; 
+   [txtInput addGestureRecognizer:tapGestureRecognizer];
 	
 }
 
@@ -131,31 +131,34 @@
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    // UNDOEN: 
+    // UNDOEN:
     [self showAlert:textField];
-    
-    
     
 }
 -(void)showAlert:(UITextField *)textField {
-    // UNDOEN: 
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Album"
-                                                        message:@"Enter a name for the album."
+    // UNDOEN:
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"INPUT"
+                                                        message:@"Enter the value"
                                                        delegate:self
                                               cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:@"Save", nil];
+                                              otherButtonTitles:@"OK", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     txtInput = [alertView textFieldAtIndex:0];
     txtInput.tag = textField.tag;
-    txtInput.placeholder = @"Title";
+    txtInput.placeholder = textField.placeholder;
     [txtInput setKeyboardType:UIKeyboardTypeNumberPad];
-    [txtInput becomeFirstResponder]; 
+    [txtInput becomeFirstResponder];
+    
     [alertView show];
+    [alertView resignFirstResponder];
+    [alertView release];
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     // UNDOEN:
+    [alertView resignFirstResponder];
     if (buttonIndex != 1) {
         NSLog(@"Cancel");
         return;
