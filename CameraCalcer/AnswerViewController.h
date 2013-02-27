@@ -20,21 +20,21 @@
     IBOutlet UILabel *lbWd;
     IBOutlet UILabel *CamFovIn;
     NSString* camreaType;
-    NSNumber* systemFov;
-    NSNumber* speed;
-    NSNumber* cdRez;
-    NSNumber* mdCdRation;
-    NSNumber* limits;
-    NSNumber* lens;
+    double systemFov;
+    double speed;
+    double cdRez;
+    double mdCdRation;
+    double limits;
+    double lens;
     
 }
 
 -(IBAction) backMainView:(id)sender;
 @property (nonatomic, retain) NSString* camreaType;
-@property (nonatomic, assign) NSNumber* systemFov;
-@property (nonatomic, assign) NSNumber* speed;
-@property (nonatomic, assign) NSNumber* cdRez;
-@property (nonatomic, assign) NSNumber* mdCdRation;
-@property (nonatomic, assign) NSNumber* limits;
-@property (nonatomic, assign) NSNumber* lens;
+@property (nonatomic, assign) double systemFov;
+@property (nonatomic, assign) double speed;
+@property (nonatomic, assign) double cdRez;
+@property (nonatomic, assign) double mdCdRation;
+@property (nonatomic, assign) double limits;
+@property (nonatomic, assign) double lens;
 @end

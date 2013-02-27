@@ -33,6 +33,8 @@
     [tapRecognizer setDelegate:self];
     [tapRecognizer setNumberOfTapsRequired:1];
     [self.view addGestureRecognizer:tapRecognizer];
+    
+   
 	
 }
 
@@ -124,8 +126,12 @@
 - (void) dismissActionSheet {
     
     // hide action sheet
-    
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
+    
+}
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+   
     
 }
 -(BOOL) textFieldShouldEndEditing:(UITextField *)textField
@@ -144,18 +150,12 @@
     AnswerViewController* answerViewController = (AnswerViewController *) [segue destinationViewController];
     answerViewController.camreaType = lbCameraType.text;
     
-    NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-    [f setNumberStyle:NSNumberFormatterDecimalStyle];
-    
-    answerViewController.systemFov = [f numberFromString: txtSystemFov.text];
-    answerViewController.speed = [f numberFromString: txtSpeed.text];
-    answerViewController.cdRez = [f numberFromString:txtCdRez.text];
-    answerViewController.mdCdRation = [f numberFromString:txtMdCdRatio.text];
-    answerViewController.limits = [f numberFromString:txtLimits.text];
-    answerViewController.lens = [f numberFromString:txtLens.text];
-    [f release];
-    
-    
+    answerViewController.systemFov = [txtSystemFov.text doubleValue];
+    answerViewController.speed = [txtSpeed.text doubleValue];
+    answerViewController.cdRez = [txtCdRez.text doubleValue];
+    answerViewController.mdCdRation = [txtMdCdRatio.text doubleValue];
+    answerViewController.limits = [txtLimits.text doubleValue];
+    answerViewController.lens = [txtLens.text doubleValue];
     
 }
 
