@@ -132,12 +132,12 @@
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
     // UNDOEN: 
-    [self showAlert];
+    [self showAlert:textField];
     
     
     
 }
--(void)showAlert {
+-(void)showAlert:(UITextField *)textField {
     // UNDOEN: 
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Album"
                                                         message:@"Enter a name for the album."
@@ -145,22 +145,46 @@
                                               cancelButtonTitle:@"Cancel"
                                               otherButtonTitles:@"Save", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
-    
-    UITextField* textfield = [alertView textFieldAtIndex:0];
-    textfield.placeholder = @"Title";
-    [[alertView textFieldAtIndex:0] setKeyboardType:UIKeyboardTypeNumberPad];
+    txtInput = [alertView textFieldAtIndex:0];
+    txtInput.tag = textField.tag;
+    txtInput.placeholder = @"Title";
+    [txtInput setKeyboardType:UIKeyboardTypeNumberPad];
+    [txtInput becomeFirstResponder]; 
     [alertView show];
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    // UNDOEN: 
+    // UNDOEN:
     if (buttonIndex != 1) {
         NSLog(@"Cancel");
         return;
     }
-    UITextField* textfield = [alertView textFieldAtIndex:0];
-    txtSystemFov.text = textfield.text;
+    txtInput = [alertView textFieldAtIndex:0];
+    switch (txtInput.tag )
+    {
+        case 1:
+            txtSystemFov.text = txtInput.text;
+            break;
+        case 2:
+            txtSpeed.text = txtInput.text;
+            break;
+        case 3:
+            txtMdCdRatio.text = txtInput.text;
+            break;
+        case 4:
+            txtCdRez.text = txtInput.text;
+            break;
+        case 5:
+            txtLens.text = txtInput.text;
+            break;
+        case 6:
+            txtLimits.text = txtInput.text;
+            break;
+        default:
+            break;
+            
+    }
 }
 
 -(BOOL) textFieldShouldEndEditing:(UITextField *)textField
