@@ -131,62 +131,82 @@
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    // UNDOEN:
     [self showAlert:textField];
-    
 }
 -(void)showAlert:(UITextField *)textField {
-    // UNDOEN:
-    
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"INPUT"
                                                         message:@"Enter the value"
                                                        delegate:self
-                                              cancelButtonTitle:@"Cancel"
-                                              otherButtonTitles:@"OK", nil];
+                                              cancelButtonTitle:@"Clear"
+                                              otherButtonTitles:@"Done", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     txtInput = [alertView textFieldAtIndex:0];
     txtInput.tag = textField.tag;
     txtInput.placeholder = textField.placeholder;
-    [txtInput setKeyboardType:UIKeyboardTypeNumberPad];
-    [txtInput becomeFirstResponder];
+    [txtInput setKeyboardType:UIKeyboardTypeDecimalPad];
     
-    [alertView show];
-    [alertView resignFirstResponder];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [alertView show];
+    });
+    
     [alertView release];
 }
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    // UNDOEN:
-    [alertView resignFirstResponder];
-    if (buttonIndex != 1) {
-        NSLog(@"Cancel");
+    if (buttonIndex == 0) {
+        switch (txtInput.tag )
+        {
+            case 1:
+                txtSystemFov.text = @"";
+                break;
+            case 2:
+                txtSpeed.text = @"";
+                break;
+            case 3:
+                txtMdCdRatio.text = @"";
+                break;
+            case 4:
+                txtCdRez.text = @"";
+                break;
+            case 5:
+                txtLens.text = @"";
+                break;
+            case 6:
+                txtLimits.text = @"";
+                break;
+            default:
+                break;
+        }
+
         return;
     }
     txtInput = [alertView textFieldAtIndex:0];
-    switch (txtInput.tag )
+    if(![txtInput.text isEqualToString:@""])
     {
-        case 1:
-            txtSystemFov.text = txtInput.text;
-            break;
-        case 2:
-            txtSpeed.text = txtInput.text;
-            break;
-        case 3:
-            txtMdCdRatio.text = txtInput.text;
-            break;
-        case 4:
-            txtCdRez.text = txtInput.text;
-            break;
-        case 5:
-            txtLens.text = txtInput.text;
-            break;
-        case 6:
-            txtLimits.text = txtInput.text;
-            break;
-        default:
-            break;
-            
+        switch (txtInput.tag )
+        {
+            case 1:
+                txtSystemFov.text = txtInput.text;
+                break;
+            case 2:
+                txtSpeed.text = txtInput.text;
+                break;
+            case 3:
+                txtMdCdRatio.text = txtInput.text;
+                break;
+            case 4:
+                txtCdRez.text = txtInput.text;
+                break;
+            case 5:
+                txtLens.text = txtInput.text;
+                break;
+            case 6:
+                txtLimits.text = txtInput.text;
+                break;
+            default:
+                break;
+        }
     }
 }
 
@@ -199,7 +219,29 @@
 {
     [self.view endEditing:YES];
 }
-
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"forAnswer"]) {
+        
+        if([txtCdRez.text isEqualToString:@""] | [txtLens.text isEqualToString:@"" ] | [txtLimits.text isEqualToString:@""] | [txtMdCdRatio.text isEqualToString:@""] | [txtSpeed.text isEqualToString:@""] | [txtSystemFov.text isEqualToString:@""])
+        {
+            UIAlertView *notPermitted = [[UIAlertView alloc]
+                                         initWithTitle:@"Alert"
+                                         message:@"Some value is empty"
+                                         delegate:nil
+                                         cancelButtonTitle:@"OK"
+                                         otherButtonTitles:nil];
+            
+            // shows alert to user
+            [notPermitted show];
+            
+            // prevent segue from occurring
+            return NO;
+        }
+    }
+    
+    // by default perform the segue transition
+    return YES;
+}
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     

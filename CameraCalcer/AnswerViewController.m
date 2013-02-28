@@ -52,12 +52,12 @@
     [dicCamNo setObject:[NSNumber numberWithInt:5] forKey:@"8K-640"];
  
     // Camera Avger 
-    NSMutableDictionary *dicCamAvg = [[NSMutableDictionary alloc]init];
-    [dicCamAvg setObject:[NSNumber numberWithDouble:8250] forKey:@"8K-320"];
-    [dicCamAvg setObject:[NSNumber numberWithDouble:8250] forKey:@"8K-640"];
-    [dicCamAvg setObject:[NSNumber numberWithDouble:7620] forKey:@"7500HS"];
-    [dicCamAvg setObject:[NSNumber numberWithDouble:7620] forKey:@"7500LS"];
-    [dicCamAvg setObject:[NSNumber numberWithDouble:5244] forKey:@"5150"];
+    NSMutableDictionary *dicCamScAvg = [[NSMutableDictionary alloc]init];
+    [dicCamScAvg setObject:[NSNumber numberWithDouble:8250] forKey:@"8K-320"];
+    [dicCamScAvg setObject:[NSNumber numberWithDouble:8250] forKey:@"8K-640"];
+    [dicCamScAvg setObject:[NSNumber numberWithDouble:7620] forKey:@"7500HS"];
+    [dicCamScAvg setObject:[NSNumber numberWithDouble:7620] forKey:@"7500LS"];
+    [dicCamScAvg setObject:[NSNumber numberWithDouble:5244] forKey:@"5150"];
     
     // Mask default value
     NSMutableDictionary *dicMaskValue = [[NSMutableDictionary alloc]init];
@@ -69,8 +69,8 @@
     
     // Mask discount value
     NSMutableDictionary *dicMaskDiscount = [[NSMutableDictionary alloc]init];
-    [dicMaskDiscount  setObject:[NSNumber numberWithDouble:0] forKey:@"8K-320"];
-    [dicMaskDiscount  setObject:[NSNumber numberWithDouble:0] forKey:@"8K-640"];
+    [dicMaskDiscount  setObject:[NSNumber numberWithDouble:357] forKey:@"8K-320"];
+    [dicMaskDiscount  setObject:[NSNumber numberWithDouble:357] forKey:@"8K-640"];
     [dicMaskDiscount  setObject:[NSNumber numberWithDouble:417] forKey:@"7500HS"];
     [dicMaskDiscount  setObject:[NSNumber numberWithDouble:417] forKey:@"7500LS"];
     [dicMaskDiscount  setObject:[NSNumber numberWithDouble:357] forKey:@"5150"];
@@ -84,21 +84,22 @@
     [dicWdDivisor setObject:[NSNumber numberWithDouble:0.07] forKey:@"5150"];
     
 #pragma set answer
-    //
+    // MDRez (checked)
     lbAnswer.text = camreaType;
     double mdRez = mdCdRation * cdRez;
-    lbMDRez.text = [NSString stringWithFormat:@"%.0f", mdRez];
-    //
-    double linesPerSecond = speed * 1000 / 60;
+    lbMDRez.text = [NSString stringWithFormat:@"%.0f mm", mdRez];
+    // Line per Second (checked)
+    double linesPerSecond = (speed * 1000 / 60) / mdRez;
     lbLinePerSecond.text = [NSString stringWithFormat:@"%.0f",linesPerSecond];
-    //
-    double tmpShiftCycles = [[dicCamMhzs objectForKey:camreaType] doubleValue] * 1000000 / linesPerSecond;
-    double shiftCycles = (tmpShiftCycles > [[dicCamAvg objectForKey:camreaType] doubleValue]) ? [[dicCamAvg objectForKey:camreaType] doubleValue]: tmpShiftCycles;
-    lbShiftCycles.text = [NSString stringWithFormat:@"%.0f", shiftCycles];
-    //
-    int other = (shiftCycles < [[dicCamAvg objectForKey:camreaType] doubleValue]) ? 1 : 0;
-    int mask = ([[dicCamNo objectForKey:camreaType] doubleValue] > 3 ) ? 0 : other;
-    lbMask.text = [NSString stringWithFormat:@"%d", mask];
+    // Shift cycles (checked)
+    int tmpShiftCycles = [[dicCamMhzs objectForKey:camreaType] doubleValue] * 1000000 / linesPerSecond;
+    double shiftCycles = (tmpShiftCycles > [[dicCamScAvg objectForKey:camreaType] intValue]) ? [[dicCamScAvg objectForKey:camreaType] doubleValue]: tmpShiftCycles;
+    lbShiftCycles.text = [NSString stringWithFormat:@"%d", (int)shiftCycles];
+    // Mask (checked)
+    int m = (shiftCycles < [[dicCamScAvg objectForKey:camreaType] doubleValue]) ? 1 : 0;
+    int mask = ([[dicCamNo objectForKey:camreaType] intValue] > 3 ) ? 0 : m;
+    lbMask.text = (mask == 0) ? @"NO" : @"YES";
+    // Number Pixels per CCD
     double numberPixelsPerCcd;
     if(mask == 0)
     {
@@ -108,10 +109,10 @@
         numberPixelsPerCcd =  shiftCycles - [[dicMaskDiscount objectForKey:camreaType] floatValue];
     }
     lbPxPerCCD.text = [NSString stringWithFormat:@"%.0f", numberPixelsPerCcd];
-    //
+    // Best Possible CD Rez (checked)
     double bestPossibleCdRez = systemFov * limits  / numberPixelsPerCcd;
-    lbBestPossibleCDRez.text = [NSString stringWithFormat:@"%.6f", bestPossibleCdRez];
-    //
+    lbBestPossibleCDRez.text = [NSString stringWithFormat:@"%.6f mm", bestPossibleCdRez];
+    // WD
     double wd = bestPossibleCdRez * lens / [[dicWdDivisor objectForKey:camreaType] doubleValue];
     lbWd.text =  [NSString stringWithFormat:@"%.2f", wd];
     //
@@ -119,7 +120,7 @@
     CamFovIn.text = [NSString stringWithFormat:@"%.2f", camFov];
     
     [dicWdDivisor release];
-    [dicCamAvg release];
+    [dicCamScAvg release];
     [dicMaskDiscount release];
     [dicMaskValue release];
     [dicCamMhzs release];
