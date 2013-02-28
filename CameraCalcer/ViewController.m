@@ -29,12 +29,14 @@
     selectedOption = 0;
     
     // add gesture
+    /*
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     [tapRecognizer setDelegate:self];
     [tapRecognizer setNumberOfTapsRequired:1];
     [self.view addGestureRecognizer:tapRecognizer];
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showAlert:)]; 
    [txtInput addGestureRecognizer:tapGestureRecognizer];
+     */
 	
 }
 
@@ -209,7 +211,7 @@
         }
     }
 }
-
+/*
 -(BOOL) textFieldShouldEndEditing:(UITextField *)textField
 {
     [textField resignFirstResponder];
@@ -219,6 +221,7 @@
 {
     [self.view endEditing:YES];
 }
+ */
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if ([identifier isEqualToString:@"forAnswer"]) {
         
